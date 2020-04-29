@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import KudosBoard from './MainContent/KudosBoard/KudosBoard';
+import BrothersBoard from './MainContent/BrothersBoard/BrothersBoard';
+import Header from './Layout/Header';
+import Footer from './Layout/Footer';
+import Title from './common/TitlePage/Title';
+import BackToTop from './Layout/Footer/GoToTop';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div style={{padding: '30px 112px'}}>
+        <Title title="Dê um kudo!" />
+        <KudosBoard />
+        <BrothersBoard />
+        <Footer />
+      </div>
+      <BackToTop />
     </div>
   );
 }
